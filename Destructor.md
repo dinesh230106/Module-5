@@ -22,10 +22,30 @@ To create a Python class `Student` with a destructor.
 ### PROGRAM
 
 ```
+# Reg.No: 212223060057
+# Name: DINESH KUMAR A
+
+class Student:
+    def __init__(self):
+        print("Constructor is called. Object created successfully.")
+
+    def __del__(self):
+        print("Destructor is called. Object destroyed successfully.")
+
+# Creating object
+s2 = Student()
+
+# Deleting object
+del s2
 
 ```
 
 ### OUTPUT
+```
+Constructor is called. Object created successfully.
+Destructor is called. Object destroyed successfully.
 
+```
 
 ### RESULT
+Thus, the Python program using a destructor has been successfully executed.
