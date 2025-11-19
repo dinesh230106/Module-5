@@ -38,9 +38,9 @@ class Details:
         self.gender = gender
 
     def display_details(self):
-        print("ID:", self.id)
-        print("Name:", self.name)
-        print("Gender:", self.gender)
+        print("Id: ", self.id)
+        print("Name: ", self.name)
+        print("Gender: ", self.gender)
 
 class Employee(Details):
     def __init__(self, id, name, gender, company, department):
@@ -49,10 +49,10 @@ class Employee(Details):
         self.department = department
 
     def display_details(self):
-        print("\n--- Employee Details ---")
+        print("Employee Object")
         super().display_details()
-        print("Company:", self.company)
-        print("Department:", self.department)
+        print("Company: ", self.company)
+        print("Department: ", self.department)
 
 class Doctor(Details):
     def __init__(self, id, name, gender, hospital, department):
@@ -61,37 +61,35 @@ class Doctor(Details):
         self.department = department
 
     def display_details(self):
-        print("\n--- Doctor Details ---")
+        print("Doctor Object")
         super().display_details()
-        print("Hospital:", self.hospital)
-        print("Department:", self.department)
+        print("Hospital: ", self.hospital)
+        print("Department: ", self.department)
 
-# Getting input from user
-emp_id = input("Enter Employee ID: ")
-emp_name = input("Enter Employee Name: ")
-emp_gender = input("Enter Employee Gender: ")
-emp_company = input("Enter Company Name: ")
-emp_department = input("Enter Employee Department: ")
+emp_id = input()
+emp_name = input()
+emp_gender = input()
+emp_company = input()
+emp_department = input()
 
-doc_id = input("\nEnter Doctor ID: ")
-doc_name = input("Enter Doctor Name: ")
-doc_gender = input("Enter Doctor Gender: ")
-doc_hospital = input("Enter Hospital Name: ")
-doc_department = input("Enter Doctor Department: ")
+doc_id = input()
+doc_name = input()
+doc_gender = input()
+doc_hospital = input()
+doc_department = input()
 
-# Creating objects
-emp = Employee(emp_id, emp_name, emp_gender, emp_company, emp_department)
-doc = Doctor(doc_id, doc_name, doc_gender, doc_hospital, doc_department)
+employee = Employee(emp_id, emp_name, emp_gender, emp_company, emp_department)
+doctor = Doctor(doc_id, doc_name, doc_gender, doc_hospital, doc_department)
 
-# Displaying details
-emp.display_details()
-doc.display_details()
-
+employee.display_details()
+print()
+doctor.display_details()
 
 ```
 
 ### OUTPUT  
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9ba0842d-b2f2-42b5-8d3c-583195cf32d9" />
+<img width="505" height="336" alt="image" src="https://github.com/user-attachments/assets/91c0d234-5dd7-42dd-b37a-b973659464bf" />
+
 
 ### RESULT
 Thus, the Python program to display employee and doctor details using Hierarchical Inheritance has been successfully executed.
