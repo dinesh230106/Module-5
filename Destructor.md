@@ -25,27 +25,23 @@ To create a Python class `Student` with a destructor.
 # Reg.No: 212223060057
 # Name: DINESH KUMAR A
 
-class Student:
+n="Emma"
+class student:
+    
     def __init__(self):
-        print("Constructor is called. Object created successfully.")
-
+        self.n=n
+        print("Inside Constructor\nObject initialized")
+        print(f"Hello, my name is {self.n}")
     def __del__(self):
-        print("Destructor is called. Object destroyed successfully.")
-
-# Creating object
-s2 = Student()
-
-# Deleting object
+        print("Inside destructor\nObject destroyed")
+s2=student()
 del s2
 
 ```
 
 ### OUTPUT
-```
-Constructor is called. Object created successfully.
-Destructor is called. Object destroyed successfully.
+<img width="548" height="230" alt="image" src="https://github.com/user-attachments/assets/98f09a70-cd47-45a0-8966-67531e1b575c" />
 
-```
 
 ### RESULT
 Thus, the Python program using a destructor has been successfully executed.
