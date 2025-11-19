@@ -40,52 +40,34 @@ class Student:
         self.name = name
         self.student_id = student_id
 
-class Record:
-    def __init__(self, attendance):
+    def get_student_info(self):
+        return self.name, self.student_id
+
+class Attendance(Student):
+    def __init__(self, name, student_id, attendance):
+        super().__init__(name, student_id)
         self.attendance = attendance
 
-class Eligibility(Student, Record):
-    def __init__(self, name, student_id, attendance):
-        Student.__init__(self, name, student_id)
-        Record.__init__(self, attendance)
-
     def check_eligibility(self):
-        print("\n--- Student Details ---")
-        print("Name:", self.name)
-        print("Student ID:", self.student_id)
-        print("Attendance:", self.attendance, "%")
         if self.attendance > 80:
-            print("Result: Eligible for next module.")
+            return "Eligible for Module Exam"
         else:
-            print("Result: Not eligible for next module.")
+            return "Not Eligible for Module Exam"
 
-# Getting input from user
-name = input("Enter Student Name: ")
-student_id = int(input("Enter Student ID: "))
-attendance = int(input("Enter Attendance Percentage: "))
+name = input()
+student_id = int(input())
+attendance = int(input())
 
-# Creating object
-student = Eligibility(name, student_id, attendance)
-
-# Checking eligibility
-student.check_eligibility()
+student = Attendance(name, student_id, attendance)
+print(student.name)
+print(student.student_id)
+print(student.check_eligibility())
 
 ```
 
 ### OUTPUT
-```
+<img width="492" height="184" alt="image" src="https://github.com/user-attachments/assets/dbae64d1-4316-4d5a-95ef-18d30858aa75" />
 
-Enter Student Name: Karthik
-Enter Student ID: 102
-Enter Attendance Percentage: 85
-
---- Student Details ---
-Name: Karthik
-Student ID: 102
-Attendance: 85 %
-Result: Eligible for next module.
-
-```
 
 
 ### RESULT
