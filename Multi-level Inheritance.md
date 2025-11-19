@@ -42,53 +42,36 @@ To write a Python program to get the name, age, and ID of a person and display t
 # Reg.No: 212223060057
 # Name: DINESH KUMAR A
 
-class Person:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-
-class PersonDetails(Person):
-    def __init__(self, name, age, person_id):
-        super().__init__(name, age)
-        self.person_id = person_id
-
-class DisplayDetails(PersonDetails):
-    def __init__(self, name, age, person_id):
-        super().__init__(name, age, person_id)
-
-    def show_details(self):
-        print("\n--- Person Details ---")
-        print("Name:", self.name)
-        print("Age:", self.age)
-        print("Person ID:", self.person_id)
-
-# Getting input from user
-name = input("Enter Name: ")
-age = int(input("Enter Age: "))
-person_id = int(input("Enter Person ID: "))
-
-# Creating object
-person = DisplayDetails(name, age, person_id)
-
-# Displaying details
-person.show_details()
+class Parent:
+   def __init__(self,name):
+     self.name = name
+   def getName(self):
+     return self.name
+class Child(Parent):
+   def __init__(self,name,age):
+     Parent.__init__(self,name)
+     self.age = age
+   def getAge(self):
+     return self.age
+class Grandchild(Child):
+   def __init__(self,name,age,id):
+     Child.__init__(self,name,age)
+     self.id=id
+   def getid(self):
+     return self.id
+name=input()
+age=int(input())
+id=int(input())
+gc = Grandchild(name,age,id)
+print(gc.getName(), gc.getAge(), gc.getid())
 
 
 
 ```
 
 ### OUTPUT
-```
-Enter Name: Ramesh
-Enter Age: 25
-Enter Person ID: 1001
+<img width="619" height="204" alt="image" src="https://github.com/user-attachments/assets/fc80f8b6-ee70-4b22-971f-44f5e8068781" />
 
---- Person Details ---
-Name: Ramesh
-Age: 25
-Person ID: 1001
-
-```
 
 ### RESULT
 Thus, the Python program to display person details using Multilevel Inheritance has been successfully executed.
