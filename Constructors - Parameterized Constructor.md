@@ -31,22 +31,16 @@ class Person:
     def __init__(self, name, userid):
         self.name = name
         self.userid = userid
-        print("User ID of the person:", self.userid)
-
-name = input("Enter your name: ")
-userid = input("Enter your User ID: ")
+        print(self.userid)
+name=input()
+userid=input()
 s1 = Person(name, userid)
 
 ```
 
 ### OUTPUT
-```
+<img width="342" height="112" alt="image" src="https://github.com/user-attachments/assets/6d889e2a-2993-465a-a0b9-75513a3dd874" />
 
-Enter your name: Dinesh Kumar
-Enter your User ID: 212223060057
-User ID of the person: 212223060057
-
-```
 
 ### RESULT
 Thus, the Python program using a parameterized constructor has been successfully executed
